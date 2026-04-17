@@ -10,4 +10,4 @@ jobs:
      - name: Print message
        run: echo "Hello, Github Actions!"
      - name: Print author message
-       run: echo "Pran"  
+       run: echo "Hello Pranshu"  
