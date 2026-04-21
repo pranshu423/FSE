@@ -1,0 +1,21 @@
+name: My second Workflow
+
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Check Node version
+        run: node -v
+
+      - name: list files
+        run: ls

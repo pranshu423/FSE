@@ -1,13 +1,46 @@
-name: My first workflow
+# name: My First Workflow
+
+# on: push
+
+# jobs:
+#   say-hello:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Print message
+#         run: echo "Hello, Github Actions!"
+
+#       - name: Print another message
+#         run: echo " Hii from Pran"
+
+
+#   say-bye:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#      - name: Print bye
+#        run: echo "Goodbye from second job"
+
+
+name: My First Workflow
+
 on: push
-
-jobs: 
+jobs:
   say-hello:
-   runs-on: ubuntu-latest
-   
+    runs-on: ubuntu-latest
 
-   steps:
-     - name: Print message
-       run: echo "Hello, Github Actions!"
-     - name: Print author message
-       run: echo "Hello Pranshu"  
+    steps:
+      - name: Print message
+        run: echo "Hello, Github Actions!"
+
+      - name: Print another message
+        run: echo " Hii from Pran"
+
+
+  say-bye:
+    needs: say-hello
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: Print bye
+       run: echo "Goodbye from second job"
