@@ -20,6 +20,5 @@ jobs:
       - name: Download Dependicies
         run: npm install  
 
-
-      - name: list files
-        run: ls
+      - name: run test
+        run: npm run test
